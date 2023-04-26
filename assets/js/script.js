@@ -129,8 +129,8 @@ function displayMultiplyQuestion(operand1, operand2) {
 
 function displayDivideQuestion(operand1, operand2) {
 
-    while (operand1 % operand2 || operand1 / operand2 == 1 || operand1 / operand2 == operand1) {
-        operand1++;
+    while (operand1 % operand2 !== 0 || operand1 / operand2 === 1 || operand1 / operand2 === operand1) {
+        ++operand1;
     };
 
     document.getElementById('operand1').textContent = operand1;
